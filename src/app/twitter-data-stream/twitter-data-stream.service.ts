@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-// import { Subject, Observable } from 'rxjs';
 import * as Pubnub from 'pubnub';
 import { AddTweet } from '../store/tweets/tweets.actions';
 import { Tweet } from '../store/tweets/tweets.model';

@@ -1,0 +1,12 @@
+<div class="container" *ngIf="tweet">
+    <div class="tweet-headline">
+        <div>
+            <div [ngStyle]="{'background-image':'url('+ tweet.profileImage + ')'}" class="profile-image"></div>
+            <h3>{{ tweet.name }} <span class="screen-name">@{{ tweet.screenName }}</span></h3>
+        </div>
+        <p>{{ tweet.country }} ({{ tweet.countryCode }})</p>
+    </div>
+    <div class="tweet-body" [ngStyle]="{'color': tweet.textColor}">
+        {{ tweet.text }}
+    </div>
+</div>

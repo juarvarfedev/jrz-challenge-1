@@ -10,17 +10,19 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { environment } from 'src/environments/environment';
 import { TweetsState } from './store/tweets/tweets.state';
-// import { FormsModule } from '@angular/forms';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { TweetComponent } from './tweet/tweet.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TwitterDataStreamComponent
+    TwitterDataStreamComponent,
+    TweetComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    // FormsModule,
     HttpClientModule,
     MatInputModule,
     NgxsModule.forRoot([
@@ -34,7 +36,7 @@ import { TweetsState } from './store/tweets/tweets.state';
     // NgxsLoggerPluginModule.forRoot({
     //   disabled: environment.production
     // })
-    // ScrollingModule
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
