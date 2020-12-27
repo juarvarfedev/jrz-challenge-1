@@ -12,13 +12,15 @@ import { environment } from 'src/environments/environment';
 import { TweetsState } from './store/tweets/tweets.state';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { TweetComponent } from './tweet/tweet.component';
+import { TweetsCounterComponent } from './tweets-counter/tweets-counter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TwitterDataStreamComponent,
-    TweetComponent
+    TweetComponent,
+    TweetsCounterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +32,9 @@ import { TweetComponent } from './tweet/tweet.component';
     ],
       { developmentMode: !environment.production },
     ),
-    // NgxsReduxDevtoolsPluginModule.forRoot({
-    //   disabled: environment.production
-    // }),
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production
+    }),
     // NgxsLoggerPluginModule.forRoot({
     //   disabled: environment.production
     // })

@@ -8,8 +8,6 @@ import { Tweet } from '../store/tweets/tweets.model';
   providedIn: 'root'
 })
 export class TwitterDataStreamService {
-  private dataList: Tweet[] = [];
-  // private dataList$: Subject<any[]> = new Subject<any[]>();
   private pubnub = new Pubnub({
     subscribeKey: "sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe",
   });

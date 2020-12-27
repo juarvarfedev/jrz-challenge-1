@@ -6,18 +6,5 @@
     <cdk-virtual-scroll-viewport itemSize="100" class="tweets-viewport">
         <app-tweet *cdkVirtualFor="let tweet of ds" [tweet]="tweet" class="tweet-item">{{tweet || 'Loading...'}}</app-tweet>
     </cdk-virtual-scroll-viewport>
-</div>   
-<!-- <div class="tweets-viewport" *ngIf="(filteredTweets$ | async) as tweets">
-    <div class="tweet-item" *ngFor="let tweet of tweets">
-        <div class="tweet-headline">
-            <div>
-                <div [ngStyle]="{'background-image':'url('+ tweet.profileImage + ')'}" class="profile-image"></div>
-                <h3>{{ tweet.name }} <span class="screen-name">@{{ tweet.screenName }}</span></h3>
-            </div>
-            <p>{{ tweet.country }} ({{ tweet.countryCode }})</p>
-        </div>
-        <div class="tweet-body" [ngStyle]="{'background-color':'tweet.backgroundColor','color':'tweet.textColor'}">
-            {{ tweet.text }}
-        </div>
-    </div>
-</div> -->
+    <app-tweets-counter></app-tweets-counter>
+</div>
