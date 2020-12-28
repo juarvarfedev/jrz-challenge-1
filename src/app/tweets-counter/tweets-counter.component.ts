@@ -27,7 +27,7 @@ export class TweetsCounterComponent implements OnInit {
 
   // take the average of all tweets per minute
   startCountingTweets(): void {
-    interval(10000).pipe().subscribe((minutes)=> {
+    interval(60000).pipe().subscribe((minutes)=> {
       const average = this.totalTweets / (minutes + 1);
       this.store.dispatch(new AverageTweets(Math.round(average)))
     });

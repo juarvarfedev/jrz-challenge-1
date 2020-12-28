@@ -49,11 +49,11 @@ export class MyDataSource extends DataSource<Tweet | undefined> {
     });
   }
 
-  connect(): Observable<Tweet[]> {
-    // this.subscription.add(collectionViewer.viewChange.subscribe((range) => {
+  connect(collectionViewer: CollectionViewer): Observable<Tweet[]> {
+    this.subscription.add(collectionViewer.viewChange.subscribe((range) => {
       // console.log(range.start);
       // console.log(range.end);
-    // }));
+    }));
     return this.dataStream;
 }
 
